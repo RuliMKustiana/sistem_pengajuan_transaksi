@@ -1,0 +1,190 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Latar belakang global dengan gradasi elegan bertema Ka'bah & Emas */
+.lavanaya-premium-bg {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1c1c1c 50%, #2d2514 100%);
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    min-vh: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Dekorasi elemen abstrak di latar belakang agar mirip contoh gambar */
+.lavanaya-premium-bg::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(197, 168, 90, 0.15) 0%, transparent 70%);
+    top: -50px;
+    right: -50px;
+    border-radius: 50%;
+}
+
+/* Wadah Utama (Main Layout Container) */
+.main-split-box {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    width: 100%;
+    max-width: 1000px;
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Sisi Kiri: Welcome Message */
+.welcome-side {
+    padding: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.welcome-side h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.welcome-line {
+    width: 60px;
+    height: 4px;
+    background-color: #c5a85a;
+    margin: 1.5rem 0;
+    border-radius: 2px;
+}
+
+.btn-learn-more {
+    background: transparent;
+    border: 2px solid rgba(197, 168, 90, 0.5);
+    color: #c5a85a;
+    font-weight: 600;
+    padding: 0.5rem 1.5rem;
+    border-radius: 30px;
+    transition: all 0.3s;
+    width: fit-content;
+}
+
+.btn-learn-more:hover {
+    background: #c5a85a;
+    color: #111111;
+    border-color: #c5a85a;
+}
+
+.form-glass-side {
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 3.5rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-glass-side h2 {
+    font-weight: 600;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.form-glass-side h2::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    background-color: #ffffff;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Input Kustom Transparan */
+.input-glass {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    color: #ffffff !important;
+    border-radius: 30px !important;
+    padding: 0.65rem 1.2rem !important;
+}
+
+.input-glass::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.input-glass:focus {
+    border-color: #c5a85a !important;
+    box-shadow: 0 0 0 0.25rem rgba(197, 168, 90, 0.25) !important;
+    background: rgba(255, 255, 255, 0.12) !important;
+}
+
+/* Tombol Submit Utama (Gradasi Oranye/Emas Mewah) */
+.btn-submit-premium {
+    background: linear-gradient(90deg, #c5a85a 0%, #e5c777 100%) !important;
+    color: #111111 !important;
+    border: none !important;
+    font-weight: 700 !important;
+    border-radius: 30px !important;
+    padding: 0.7rem !important;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: transform 0.2s, opacity 0.2s !important;
+}
+
+.btn-submit-premium:hover {
+    transform: translateY(-2px);
+    opacity: 0.95;
+}
+
+/* Responsif untuk Smartphone */
+@media (max-width: 767.98px) {
+    .main-split-box {
+        margin: 1rem;
+        border-radius: 16px;
+    }
+    .welcome-side {
+        padding: 2.5rem 2rem 1.5rem 2rem;
+        text-align: center;
+        align-items: center;
+    }
+    .welcome-side h1 {
+        font-size: 2.3rem;
+    }
+    .welcome-line {
+        margin: 1rem auto;
+    }
+    .form-glass-side {
+        border-left: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 2rem 2rem 2.5rem 2rem;
+    }
+}
+
+/* Latar belakang global - Kunci tinggi layar penuh */
+.lavanaya-premium-bg {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1c1c1c 50%, #2d2514 100%);
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    min-height: 100vh; /* PERBAIKAN: Menggunakan min-height agar background memenuhi layar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow-x: hidden;
+    padding: 2rem 0; /* Memberikan ruang napas atas-bawah jika layar pendek */
+}
+
+/* Sisi Kiri: Welcome Message - Optimasi ukuran teks */
+.welcome-side p {
+    font-size: 1.05rem !important; /* Membuat teks sedikit lebih proporsional */
+    line-height: 1.7 !important;
+    margin-bottom: 2.5rem !important; /* Memberikan jarak lebih sebelum tombol */
+}
